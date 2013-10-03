@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.0 U (http://www.xmlspy.com) by Ray Denenberg (Library of Congress) -->
+<!--
+
+dcx Schema for SRU. April 2008.
+
+This schema allows you to include
+1. DC simple elements (original 15)
+2. dcterms elements
+3. other elements
+
+An instance looks like this:
+
+<dcx>
+<simpleDc>
+	<dc:title/>
+	<dc:abstract/>
+</simpleDc>
+<dcTerms>
+	<dcterms:alternative></dcterms:alternative>
+</dcTerms>
+<otherElements>
+<other:xyz xmlns:other="info:xxx"/>
+</otherElements>
+</dcx>
+
+-->
+<xs:schema 
+xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="info:lc/xmlns/dcx-v1"
+ xmlns="info:lc/xmlns/dcx-v1"
+  xmlns:dc="http://purl.org/dc/terms/" 
+  xmlns:dcterms="http://purl.org/dc/terms/" 
+  elementFormDefault="qualified" 
+  attributeFormDefault="unqualified">
+  <!-- -->
+	<xs:import namespace="http://purl.org/dc/terms/" schemaLocation="dcterms.xsd"/>
+	<!--
+Root element declarations:
+-->
+	<xs:element name="dcx" type="dcxComplexType"/>
+	<!--
+End root element declarations:
+-->
+	<xs:complexType name="dcxComplexType">
+		<xs:sequence>
+			<xs:element name="simpleDc" minOccurs="0" type="simpleDcComplexType"/>
+			<xs:element name="dcTerms" minOccurs="0" type="dcTermsComplexType"/>
+			<xs:element name="otherElements" minOccurs="0" type="otherElementsComplexType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="simpleDcComplexType">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element ref="dc:title"/>
+			<xs:element ref="dc:creator"/>
+			<xs:element ref="dc:subject"/>
+			<xs:element ref="dc:description"/>
+			<xs:element ref="dc:publisher"/>
+			<xs:element ref="dc:contributor"/>
+			<xs:element ref="dc:date"/>
+			<xs:element ref="dc:type"/>
+			<xs:element ref="dc:format"/>
+			<xs:element ref="dc:identifier"/>
+			<xs:element ref="dc:source"/>
+			<xs:element ref="dc:language"/>
+			<xs:element ref="dc:relation"/>
+			<xs:element ref="dc:coverage"/>
+			<xs:element ref="dc:rights"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="dcTermsComplexType">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element ref="dc:alternative"/>
+			<xs:element ref="dc:tableOfContents"/>
+			<xs:element ref="dc:abstract"/>
+			<xs:element ref="dc:created"/>
+			<xs:element ref="dc:valid"/>
+			<xs:element ref="dc:available"/>
+			<xs:element ref="dc:issued"/>
+			<xs:element ref="dc:modified"/>
+			<xs:element ref="dc:dateAccepted"/>
+			<xs:element ref="dc:dateCopyrighted"/>
+			<xs:element ref="dc:dateSubmitted"/>
+			<xs:element ref="dc:extent"/>
+			<xs:element ref="dc:medium"/>
+			<xs:element ref="dc:isVersionOf"/>
+			<xs:element ref="dc:hasVersion"/>
+			<xs:element ref="dc:isReplacedBy"/>
+			<xs:element ref="dc:replaces"/>
+			<xs:element ref="dc:isRequiredBy"/>
+			<xs:element ref="dc:requires"/>
+			<xs:element ref="dc:isPartOf"/>
+			<xs:element ref="dc:hasPart"/>
+			<xs:element ref="dc:isReferencedBy"/>
+			<xs:element ref="dc:references"/>
+			<xs:element ref="dc:isFormatOf"/>
+			<xs:element ref="dc:hasFormat"/>
+			<xs:element ref="dc:conformsTo"/>
+			<xs:element ref="dc:spatial"/>
+			<xs:element ref="dc:temporal"/>
+			<xs:element ref="dc:audience"/>
+			<xs:element ref="dc:accrualMethod"/>
+			<xs:element ref="dc:accrualPeriodicity"/>
+			<xs:element ref="dc:accrualPolicy"/>
+			<xs:element ref="dc:instructionalMethod"/>
+			<xs:element ref="dc:provenance"/>
+			<xs:element ref="dc:rightsHolder"/>
+			<xs:element ref="dc:mediator"/>
+			<xs:element ref="dc:educationLevel"/>
+			<xs:element ref="dc:accessRights"/>
+			<xs:element ref="dc:license"/>
+			<xs:element ref="dc:bibliographicCitation"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="otherElementsComplexType">
+		<xs:sequence>
+			<xs:any maxOccurs="unbounded" namespace="##any" processContents="lax"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

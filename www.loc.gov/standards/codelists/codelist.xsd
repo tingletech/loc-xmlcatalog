@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with Altova XMLSpy 2006 Professional Edition  (http://www.xmlspy.com) by Ray Denenberg  (Library of Congress) -->
+<xs:schema targetNamespace="info:lc/xmlns/codelist-v1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="info:lc/xmlns/codelist-v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- 
+	
+Codelist Version 1.0  October 19, 2007
+
+********************************************************
+ History:
+
+October 19, 2007: initial release, version 1.0
+
+********************************************************
+-->
+	<!-- 
+root  declaration
+-->
+	<xs:element name="codelist" type="codelistType"/>
+	<!--
+end root declaration 
+-->
+	<xs:complexType name="codelistType">
+		<xs:sequence>
+			<xs:element name="codelistId" type="xs:string"/>
+			<xs:element name="title" type="xs:string"/>
+			<xs:element name="author" type="xs:string"/>
+			<xs:element name="uri" type="xs:anyURI"/>
+			<xs:choice>
+				<xs:element name="countries" type="codes"/>
+				<xs:element name="gacs" type="codes"/>
+				<xs:element name="languages" type="codes"/>
+				<xs:element name="relators" type="codes"/>
+				<xs:element name="sources" type="codes"/>
+				<xs:element name="conventions" type="codes"/>
+			</xs:choice>
+		</xs:sequence>
+		<xs:attribute name="version" type="versionType"/>
+	</xs:complexType>
+	<!-- -->
+	<xs:complexType name="codes">
+		<xs:choice>
+			<xs:element name="country" maxOccurs="unbounded" type="codeInfo"/>
+			<xs:element name="gac" maxOccurs="unbounded" type="codeInfo"/>
+			<xs:element name="language" maxOccurs="unbounded" type="codeInfo"/>
+			<xs:element name="relator" maxOccurs="unbounded" type="relatorType"/>
+			<xs:element name="source" maxOccurs="unbounded" type="codeInfo"/>
+			<xs:element name="convention" maxOccurs="unbounded" type="codeInfo"/>
+		</xs:choice>
+	</xs:complexType>
+	<!-- -->
+	<xs:complexType name="codeInfo">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="name" type="nameType"/>
+			<xs:element name="code" type="codeType"/>
+			<xs:element name="definition" type="xs:string"/>
+			<xs:element name="note" type="noteType"/>
+			<xs:element name="region" type="xs:string"/>
+			<xs:element name="uf" type="ufType"/>
+			<xs:element name="address" type="addressType"/>
+			<xs:element name="field" type="fieldType"/>
+			<xs:element name="uri" type="xs:anyURI"/>
+		</xs:choice>
+		<xs:attribute name="type" type="typeType"/>
+	</xs:complexType>
+	<!-- -->
+	<xs:complexType name="relatorType">
+		<xs:complexContent>
+			<xs:extension base="codeInfo">
+				<xs:attribute name="dcContributor" type="yes"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- -->
+	<xs:complexType name="nameType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="authorized" type="yes"/>
+			
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- -->
+	<xs:complexType name="codeType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="status" type="obsolete"/>
+				<xs:attribute name="date" type="xs:string"/>
+			
+				<xs:attribute name="level" type="levelType"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- -->
+	<xs:complexType name="noteType">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="text" type="xs:string"/>
+			<xs:element name="name" type="nameType"/>
+			<xs:element name="code" type="codeType"/>
+			<xs:element name="date" type="dateType"/>
+		</xs:choice>
+	</xs:complexType>
+	<!-- -->
+	<xs:complexType name="ufType">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="name" type="nameType"/>
+			<xs:element name="note" type="noteType"/>
+			<xs:element name="uf" type="ufType"/>
+		</xs:choice>
+	</xs:complexType>
+	<!-- -->
+	<xs:complexType name="addressType">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="physical" type="xs:string"/>
+			<xs:element name="url" type="xs:anyURI"/>
+		</xs:choice>
+	</xs:complexType>
+	<!-- -->
+	<xs:complexType name="fieldType">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="name" type="xs:string"/>
+			<xs:element name="label" type="xs:string"/>
+			<xs:element name="format" type="formatType"/>
+		</xs:choice>
+		<xs:attribute name="type" type="xs:string"/>
+		<xs:attribute name="subtype" type="xs:string"/>
+	</xs:complexType>
+	<!-- -->
+	<xs:complexType name="formatType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="sf" type="sfType"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- -->
+	<xs:complexType name="dateType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="type" type="typeType"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- -->
+	<xs:simpleType name="typeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="before"/>
+			<xs:enumeration value="after"/>
+			<xs:enumeration value="collective"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- -->
+	<xs:simpleType name="yes">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="yes"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- -->
+	<xs:simpleType name="obsolete">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="obsolete"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- -->
+	<xs:simpleType name="levelType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[1-9]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- -->
+	<xs:simpleType name="sfType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-z0-9]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--   -->
+	<xs:simpleType name="versionType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="1.0"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

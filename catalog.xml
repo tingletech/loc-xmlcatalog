@@ -1,0 +1,110 @@
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN"
+ "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <url name="http://www.loc.gov/marc/marcdtd/mrcaxmlfile.dtd" uri="./www.loc.gov/marc/marcdtd/mrcaxmlfile.dtd"/>
+  <url name="http://www.loc.gov/marc/marcdtd/mrcbxmlfile.dtd" uri="./www.loc.gov/marc/marcdtd/mrcbxmlfile.dtd"/>
+  <url name="http://www.loc.gov/standards/mix/mix02/mix02.xsd" uri="./www.loc.gov/standards/mix/mix02/mix02.xsd"/>
+  <url name="http://www.loc.gov/standards/mix/mix10/mix10.xsd" uri="./www.loc.gov/standards/mix/mix10/mix10.xsd"/>
+  <url name="http://www.loc.gov/standards/mix/mix20/mix20.xsd" uri="./www.loc.gov/standards/mix/mix20/mix20.xsd"/>
+  <url name="http://www.loc.gov/standards/mix/mix.xsd" uri="./www.loc.gov/standards/mix/mix.xsd"/>
+  <url name="http://www.loc.gov/standards/sru/xml-files/diagnostics.xsd" uri="./www.loc.gov/standards/sru/xml-files/diagnostics.xsd"/>
+  <url name="http://www.loc.gov/standards/sru/specs/zeerex-2.0.xml-1.dtd" uri="./www.loc.gov/standards/sru/specs/zeerex-2.0.xml-1.dtd"/>
+  <url name="http://www.loc.gov/standards/sru/specs/zeerex-2.0.xsd" uri="./www.loc.gov/standards/sru/specs/zeerex-2.0.xsd"/>
+  <url name="http://www.loc.gov/standards/sru/resources/dcx/dcx.xsd" uri="./www.loc.gov/standards/sru/resources/dcx/dcx.xsd"/>
+  <url name="http://www.loc.gov/standards/sru/resources/dc-schema.xsd" uri="./www.loc.gov/standards/sru/resources/dc-schema.xsd"/>
+  <url name="http://www.loc.gov/standards/sru/resources/pica-xml-v1-0.xsd" uri="./www.loc.gov/standards/sru/resources/pica-xml-v1-0.xsd"/>
+  <url name="http://www.loc.gov/standards/sru/resources/zeerex-2.0.xsd" uri="./www.loc.gov/standards/sru/resources/zeerex-2.0.xsd"/>
+  <url name="http://www.loc.gov/standards/sru/resources/diagnostic.xsd" uri="./www.loc.gov/standards/sru/resources/diagnostic.xsd"/>
+  <url name="http://www.loc.gov/standards/sru/sru1-1archive/xml-files/diagnostics.xsd" uri="./www.loc.gov/standards/sru/sru1-1archive/xml-files/diagnostics.xsd"/>
+  <url name="http://www.loc.gov/standards/sru/sru1-1archive/xml-files/xcql.xsd" uri="./www.loc.gov/standards/sru/sru1-1archive/xml-files/xcql.xsd"/>
+  <url name="http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd" uri="./www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd"/>
+  <url name="http://www.loc.gov/standards/alto/alto-v2.0.xsd" uri="./www.loc.gov/standards/alto/alto-v2.0.xsd"/>
+  <url name="http://www.loc.gov/standards/mads/mads.xsd" uri="./www.loc.gov/standards/mads/mads.xsd"/>
+  <url name="http://www.loc.gov/standards/mads/mads-1-0.xsd" uri="./www.loc.gov/standards/mads/mads-1-0.xsd"/>
+  <url name="http://www.loc.gov/standards/mets/profile_docs/mets.profile.v2-0.xsd" uri="./www.loc.gov/standards/mets/profile_docs/mets.profile.v2-0.xsd"/>
+  <url name="http://www.loc.gov/standards/mets/profile_docs/mets.profile.v1-2.xsd" uri="./www.loc.gov/standards/mets/profile_docs/mets.profile.v1-2.xsd"/>
+  <url name="http://www.loc.gov/standards/mets/mets.xsd" uri="./www.loc.gov/standards/mets/mets.xsd"/>
+  <url name="http://www.loc.gov/standards/mets/xlink.xsd" uri="./www.loc.gov/standards/mets/xlink.xsd"/>
+  <url name="http://www.loc.gov/standards/mets/version11/mets.xsd" uri="./www.loc.gov/standards/mets/version11/mets.xsd"/>
+  <url name="http://www.loc.gov/standards/mets/version12/mets.xsd" uri="./www.loc.gov/standards/mets/version12/mets.xsd"/>
+  <url name="http://www.loc.gov/standards/mets/version13/mets.xsd" uri="./www.loc.gov/standards/mets/version13/mets.xsd"/>
+  <url name="http://www.loc.gov/standards/mets/version13/mets.v1-3.xsd" uri="./www.loc.gov/standards/mets/version13/mets.v1-3.xsd"/>
+  <url name="http://www.loc.gov/standards/mets/version13/xlink.xsd" uri="./www.loc.gov/standards/mets/version13/xlink.xsd"/>
+  <url name="http://www.loc.gov/standards/mets/version14/mets.xsd" uri="./www.loc.gov/standards/mets/version14/mets.xsd"/>
+  <url name="http://www.loc.gov/standards/mets/version15/mets.xsd" uri="./www.loc.gov/standards/mets/version15/mets.xsd"/>
+  <url name="http://www.loc.gov/standards/mets/version16/mets.xsd" uri="./www.loc.gov/standards/mets/version16/mets.xsd"/>
+  <url name="http://www.loc.gov/standards/mets/version16/mets.v1-6_chi.xsd" uri="./www.loc.gov/standards/mets/version16/mets.v1-6_chi.xsd"/>
+  <url name="http://www.loc.gov/standards/mets/version17/mets.xsd" uri="./www.loc.gov/standards/mets/version17/mets.xsd"/>
+  <url name="http://www.loc.gov/standards/mets/version18/mets.xsd" uri="./www.loc.gov/standards/mets/version18/mets.xsd"/>
+  <url name="http://www.loc.gov/standards/mets/version18/mets.v1-8.xsd" uri="./www.loc.gov/standards/mets/version18/mets.v1-8.xsd"/>
+  <url name="http://www.loc.gov/standards/mets/version19/mets.xsd" uri="./www.loc.gov/standards/mets/version19/mets.xsd"/>
+  <url name="http://www.loc.gov/standards/mets/version191/mets.xsd" uri="./www.loc.gov/standards/mets/version191/mets.xsd"/>
+  <url name="http://www.loc.gov/standards/mods/v3/mods-3-5-DRAFT.xsd" uri="./www.loc.gov/standards/mods/v3/mods-3-5-DRAFT.xsd"/>
+  <url name="http://www.loc.gov/standards/mods/v3/mods-3-0.xsd" uri="./www.loc.gov/standards/mods/v3/mods-3-0.xsd"/>
+  <url name="http://www.loc.gov/standards/mods/v3/mods-3-1.xsd" uri="./www.loc.gov/standards/mods/v3/mods-3-1.xsd"/>
+  <url name="http://www.loc.gov/standards/mods/v3/mods-3-2.xsd" uri="./www.loc.gov/standards/mods/v3/mods-3-2.xsd"/>
+  <url name="http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" uri="./www.loc.gov/standards/mods/v3/mods-3-3.xsd"/>
+  <url name="http://www.loc.gov/standards/mods/v3/mods-3-4.xsd" uri="./www.loc.gov/standards/mods/v3/mods-3-4.xsd"/>
+  <url name="http://www.loc.gov/standards/mods/v3/mods-3-5.xsd" uri="./www.loc.gov/standards/mods/v3/mods-3-5.xsd"/>
+  <url name="http://www.loc.gov/standards/mods/mods.xsd" uri="./www.loc.gov/standards/mods/mods.xsd"/>
+  <url name="http://www.loc.gov/standards/xlink/xlink.xsd" uri="./www.loc.gov/standards/xlink/xlink.xsd"/>
+  <url name="http://www.loc.gov/standards/marcxml/schema/xml.xsd" uri="./www.loc.gov/standards/marcxml/schema/xml.xsd"/>
+  <url name="http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd" uri="./www.loc.gov/standards/marcxml/schema/MARC21slim.xsd"/>
+  <url name="http://www.loc.gov/standards/amdvmd/videoMD.xsd" uri="./www.loc.gov/standards/amdvmd/videoMD.xsd"/>
+  <url name="http://www.loc.gov/standards/amdvmd/audioMD.xsd" uri="./www.loc.gov/standards/amdvmd/audioMD.xsd"/>
+  <url name="http://www.loc.gov/standards/iso20775/N130_ISOholdings_v6_1.xsd" uri="./www.loc.gov/standards/iso20775/N130_ISOholdings_v6_1.xsd"/>
+  <url name="http://www.loc.gov/standards/iso20775/ISOholdings_V1.0.xsd" uri="./www.loc.gov/standards/iso20775/ISOholdings_V1.0.xsd"/>
+  <url name="http://www.loc.gov/standards/iso25577/marcxchange-2-0.xsd" uri="./www.loc.gov/standards/iso25577/marcxchange-2-0.xsd"/>
+  <url name="http://www.loc.gov/standards/iso25577/marcxchange-1-1.xsd" uri="./www.loc.gov/standards/iso25577/marcxchange-1-1.xsd"/>
+  <url name="http://www.loc.gov/standards/premis/v1/Object-v1-1.xsd" uri="./www.loc.gov/standards/premis/v1/Object-v1-1.xsd"/>
+  <url name="http://www.loc.gov/standards/premis/v1/Rights-v1-1.xsd" uri="./www.loc.gov/standards/premis/v1/Rights-v1-1.xsd"/>
+  <url name="http://www.loc.gov/standards/premis/v1/Event-v1-1.xsd" uri="./www.loc.gov/standards/premis/v1/Event-v1-1.xsd"/>
+  <url name="http://www.loc.gov/standards/premis/v1/PREMIS-v1-1.xsd" uri="./www.loc.gov/standards/premis/v1/PREMIS-v1-1.xsd"/>
+  <url name="http://www.loc.gov/standards/premis/v1/Agent-v1-1.xsd" uri="./www.loc.gov/standards/premis/v1/Agent-v1-1.xsd"/>
+  <url name="http://www.loc.gov/standards/premis/v2/premis.xsd" uri="./www.loc.gov/standards/premis/v2/premis.xsd"/>
+  <url name="http://www.loc.gov/standards/premis/v2/premis-v2-0.xsd" uri="./www.loc.gov/standards/premis/v2/premis-v2-0.xsd"/>
+  <url name="http://www.loc.gov/standards/premis/v2/premis-v2-1.xsd" uri="./www.loc.gov/standards/premis/v2/premis-v2-1.xsd"/>
+  <url name="http://www.loc.gov/standards/premis/premis.xsd" uri="./www.loc.gov/standards/premis/premis.xsd"/>
+  <url name="http://www.loc.gov/standards/premis/Object-v1-0.xsd" uri="./www.loc.gov/standards/premis/Object-v1-0.xsd"/>
+  <url name="http://www.loc.gov/standards/premis/Rights-v1-0.xsd" uri="./www.loc.gov/standards/premis/Rights-v1-0.xsd"/>
+  <url name="http://www.loc.gov/standards/premis/Event-v1-0.xsd" uri="./www.loc.gov/standards/premis/Event-v1-0.xsd"/>
+  <url name="http://www.loc.gov/standards/premis/PREMIS-v1-0.xsd" uri="./www.loc.gov/standards/premis/PREMIS-v1-0.xsd"/>
+  <url name="http://www.loc.gov/standards/premis/Agent-v1-0.xsd" uri="./www.loc.gov/standards/premis/Agent-v1-0.xsd"/>
+  <url name="http://www.loc.gov/standards/rights/METSRights.xsd" uri="./www.loc.gov/standards/rights/METSRights.xsd"/>
+  <url name="http://www.loc.gov/standards/textMD/textMD.xsd" uri="./www.loc.gov/standards/textMD/textMD.xsd"/>
+  <url name="http://www.loc.gov/standards/textMD/textMD-v3.01a.xsd" uri="./www.loc.gov/standards/textMD/textMD-v3.01a.xsd"/>
+  <url name="http://www.loc.gov/standards/textMD/textMD-v3.0a.xsd" uri="./www.loc.gov/standards/textMD/textMD-v3.0a.xsd"/>
+  <url name="http://www.loc.gov/standards/codelists/codelist.xsd" uri="./www.loc.gov/standards/codelists/codelist.xsd"/>
+  <url name="http://www.loc.gov/standards/vracore/vra-strict.xsd" uri="./www.loc.gov/standards/vracore/vra-strict.xsd"/>
+  <url name="http://www.loc.gov/standards/vracore/vra.xsd" uri="./www.loc.gov/standards/vracore/vra.xsd"/>
+  <!-- 
+  Copyright © 2013, Regents of the University of California All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  * Redistributions of source code must retain the above copyright notice,
+  this list of conditions and the following disclaimer.
+
+  * Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+
+  * Neither the name of the University of California nor the names of
+  its contributors may be used to endorse or promote products derived
+  from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+  TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+  PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  -->
+</catalog>

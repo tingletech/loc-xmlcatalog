@@ -1,0 +1,171 @@
+
+<!-- Author: Rob Sanderson (azaroth@liv.ac.uk)  -->
+<!-- Version: 2.0                               -->
+<!-- Date: 16 February, 2004                      -->
+<!-- Documentation:  http://explain.z3950.org/  -->
+
+<!ELEMENT explain (serverInfo, databaseInfo?, metaInfo?, indexInfo?, (recordInfo|schemaInfo)?, configInfo?)>
+<!ATTLIST explain xmlns CDATA #FIXED "http://explain.z3950.org/dtd/2.0/"
+                  authoritative (true|false) "false"
+                  id CDATA #IMPLIED>
+
+<!-- Server Info -->
+
+<!ELEMENT serverInfo (host, port, database, authentication?)>
+<!ATTLIST serverInfo
+                     protocol CDATA "Z39.50"
+		     version CDATA "3"
+                     transport CDATA "http"
+		     wsdl CDATA #IMPLIED>
+
+<!ELEMENT host (#PCDATA)>
+<!ELEMENT port (#PCDATA)>
+<!ELEMENT database (#PCDATA)>
+<!ATTLIST database
+                   numRecs CDATA #IMPLIED
+                   lastUpdate CDATA #IMPLIED>
+
+<!ELEMENT authentication (open | (user?, group?, password?))>
+<!ATTLIST authentication
+                         required (true|false) "true">
+<!ELEMENT open (#PCDATA)>
+<!ELEMENT user (#PCDATA)>
+<!ELEMENT group (#PCDATA)>
+<!ELEMENT password (#PCDATA)>
+
+<!-- Database Info -->
+
+<!ELEMENT databaseInfo (title*, description*, (author | contact | extent | history | langUsage | restrictions | subjects | links | implementation)*  )>
+
+
+<!-- Note that title is used in more than just databaseInfo -->
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title
+                primary (true|false) #IMPLIED
+                lang CDATA #IMPLIED>
+
+<!ELEMENT description (#PCDATA)>
+<!ATTLIST description
+                      primary (true|false) #IMPLIED
+                      lang CDATA #IMPLIED>
+
+<!ELEMENT author (#PCDATA)>
+<!ATTLIST author
+                 primary (true|false) #IMPLIED
+                 lang CDATA #IMPLIED>
+
+<!ELEMENT contact (#PCDATA)>
+<!ATTLIST contact
+                  primary (true|false) #IMPLIED
+                  lang CDATA #IMPLIED>
+
+<!ELEMENT extent (#PCDATA)>
+<!ATTLIST extent
+                 primary (true|false) #IMPLIED
+                 lang CDATA #IMPLIED>
+
+
+<!ELEMENT history (#PCDATA)>
+<!ATTLIST history
+                  primary (true|false) #IMPLIED
+                  lang CDATA #IMPLIED>
+
+<!ELEMENT langUsage (#PCDATA)>
+<!ATTLIST langUsage
+                    codes CDATA #IMPLIED
+                    primary (true|false) #IMPLIED
+                    lang CDATA #IMPLIED>
+
+<!ELEMENT restrictions (#PCDATA)>
+<!ATTLIST restrictions
+                       primary (true|false) #IMPLIED
+                       lang CDATA #IMPLIED>
+
+<!ELEMENT subjects (subject+)>
+<!ELEMENT subject (#PCDATA)>
+
+<!ELEMENT links (link+)>
+<!ELEMENT link (#PCDATA)>
+<!ATTLIST link
+               type CDATA #IMPLIED>
+
+<!ELEMENT implementation (title*)>
+<!ATTLIST implementation
+               identifier CDATA #IMPLIED
+               version CDATA #IMPLIED>
+
+
+
+<!-- Meta Info -->
+
+<!ELEMENT metaInfo (dateModified, (aggregatedFrom, dateAggregated)?)>
+
+<!ELEMENT dateModified (#PCDATA)>
+<!ELEMENT aggregatedFrom (#PCDATA)>
+<!ELEMENT dateAggregated (#PCDATA)>
+
+<!-- Index Info -->
+
+<!ELEMENT indexInfo ((set | index | sortKeyword)+)>
+
+<!ELEMENT set (title*)>
+<!ATTLIST set
+ 	           name CDATA #REQUIRED
+ 	           identifier CDATA #REQUIRED>
+
+<!ELEMENT index (title*, map+, configInfo?)>
+<!ATTLIST index
+                id CDATA #IMPLIED 
+                search (true|false) #IMPLIED
+                scan (true|false) #IMPLIED
+                sort (true|false) #IMPLIED>
+
+<!ELEMENT sortKeyword (#PCDATA)>
+
+<!ELEMENT map ((attr+)|name)>
+<!ATTLIST map
+              primary (true|false) "false">
+
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name 
+               set CDATA #IMPLIED>
+
+<!ELEMENT attr (#PCDATA)>
+<!ATTLIST attr
+               type CDATA #REQUIRED
+               set CDATA "1.2.840.10003.3.1">
+
+
+<!-- Record Info and Schema Info -->
+
+<!ELEMENT recordInfo (recordSyntax+)>
+<!ELEMENT recordSyntax (elementSet+)>
+<!ATTLIST recordSyntax
+                       name CDATA #IMPLIED 
+                       identifier CDATA #IMPLIED>
+<!ELEMENT elementSet (title*)>
+<!ATTLIST elementSet
+                              name CDATA #REQUIRED>
+
+<!ELEMENT schemaInfo (schema+)>
+<!ELEMENT schema (title*)>
+<!ATTLIST schema
+                 identifier CDATA #REQUIRED
+                 name CDATA #REQUIRED
+                 location CDATA #IMPLIED
+                 sort (true|false) "false"
+                 retrieve (true|false) "true">
+
+<!-- Config Info -->		 
+
+<!ELEMENT configInfo ((default|setting|supports)*)>
+<!ELEMENT default (#PCDATA)>
+<!ATTLIST default
+                  type CDATA #REQUIRED>
+<!ELEMENT setting (#PCDATA)>
+<!ATTLIST setting
+                  type CDATA #REQUIRED>
+<!ELEMENT supports (#PCDATA)>
+<!ATTLIST supports 
+                   type CDATA #REQUIRED>
+
